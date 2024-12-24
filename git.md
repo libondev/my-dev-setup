@@ -8,4 +8,7 @@ git config init.defaultBranch main
 
 # auto set upstream
 git config --global push.autoSetupRemote true
+
+# 取消忽略大小写
+git config --global core.ignorecase false
 ```
