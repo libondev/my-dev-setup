@@ -5,7 +5,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 
 # 设置默认的分支名为 main
-git config init.defaultBranch main
+git config --global init.defaultBranch main
 
 # auto set upstream
 git config --global push.autoSetupRemote true
