@@ -7,7 +7,7 @@ git config --global user.email "your_email@example.com"
 # 设置默认的分支名为 main
 git config --global init.defaultBranch main
 
-# auto set upstream
+# 在项目仓库首次设置 remote 的时候自动关联远程和本地分支
 git config --global push.autoSetupRemote true
 
 # 取消忽略大小写
