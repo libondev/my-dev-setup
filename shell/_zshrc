@@ -1,0 +1,74 @@
+alias sc='cd /Volumes/code'
+
+# System
+alias ll='ls -g'
+alias cls='clear'
+alias rmf='rm -rf '
+
+alias ..='cd ..'
+alias .='codeAlias'
+
+function codeAlias() {
+  if [ $# -eq 0 ]; then
+    # 如果没有参数，则执行 code ./
+    command code -r ./
+  elif [ $# -eq 1 ]; then
+    # 如果只有一个参数，则执行 code $1
+    command code -r "$1"
+  else
+    # 如果有多个参数，则输出错误信息
+    echo "Usage: code [path]"
+  fi
+}
+
+# Node
+alias i='pnpm i '
+alias x='pnpx -y '
+alias r='bun run '
+alias d='bun run dev'
+alias s='bun run serve'
+alias b='bun run build'
+alias ss='bun run start'
+alias ci='code . && pnpm i'
+alias un='nun '
+alias id='ni -D '
+alias ig='pnpm i -g '
+alias deps='pnpx taze minor -w'
+alias xni='npx --no-install '
+
+# Git
+alias gl='git pull '
+alias gp='git push '
+alias gc='git clone '
+alias gm='git add . && git commit -m '
+alias branchs='git branch -a'
+alias checkout='git checkout -b '
+alias undo="git reset --soft HEAD^"
+
+# SSH
+alias sshgen='ssh-keygen -t ed25519 -C '
+alias sshkey='cat ~/.ssh/id_ed25519.pub'
+
+# bun completions
+[ -s "/Users/admin/.bun/_bun" ] && source "/Users/admin/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/Users/admin/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun end
+
+# pnpm
+export PNPM_HOME="/Users/admin/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# 只展示当前目录, 修改 1 为更大的数字可以展示更多目录
+PS1="%2d $ "
+
+# zsh 的语法高亮插件
+# brew install zsh-syntax-highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zsh 自动提示
+# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
