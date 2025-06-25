@@ -35,6 +35,7 @@ alias id='ni -D '
 alias ig='pnpm i -g '
 alias deps='pnpx taze minor -w'
 alias xni='npx --no-install '
+alias rnm='rm -rf **/node_modules(/)'
 
 # Git
 alias gl='git pull '
