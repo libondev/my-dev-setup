@@ -1,4 +1,12 @@
-PROMPT='%F{cyan}%2~%f %# '
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# 只在有 git 信息时显示「 (分支名)」；非仓库、detached 等按下面 style 处理
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats ' (%b)'
+zstyle ':vcs_info:git:*' actionformats ' (%b|%a)'
+setopt PROMPT_SUBST
+PROMPT='%2~${vcs_info_msg_0_}%# '
 
 alias sc='cd ~/Documents/_code'
 
