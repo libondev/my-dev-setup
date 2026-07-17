@@ -24,10 +24,8 @@ git config --global help.autocorrect prompt
 # 取消忽略大小写
 git config --global core.ignorecase false
 
-# 将 core.autocrlf 设置为 input（在提交时仅转换为 LF，在检出时不转换，避免在不同设备上编辑的时候换行符不一致的问题）：
-git config --global core.autocrlf input
-# 或者禁用自动转换
-git config --global core.autocrlf false
+# 让 git diff 忽略换行符差异（不改变存储行为）
+git config --global core.whitespace cr-at-eol
 
 # 切换比对的算法
 git config --global diff.algorithm histogram
