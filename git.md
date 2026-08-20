@@ -27,6 +27,9 @@ git config --global core.ignorecase false
 # 让 git diff 忽略换行符差异（不改变存储行为）
 git config --global core.whitespace cr-at-eol
 
+# 提交的时候转换成 lf，但是拉取代码的时候不用处理
+git config --global core.autocrlf input
+
 # 切换比对的算法
 git config --global diff.algorithm histogram
 
