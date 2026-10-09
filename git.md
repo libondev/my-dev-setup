@@ -2,17 +2,6 @@
 
 > 适用于 Windows 多设备协作开发,核心目标是避免 CRLF 行尾污染导致的
 > 「同一文件在多人之间反复全量 diff / 冲突」问题。
->
-> 环境基准:Git 2.56.0.windows.1,安装于 `D:\Git\`
-> 配置文件:`C:\Users\<用户名>\.gitconfig`
->
-> 完整复制执行:
->
-> ```sh
-> git config --global user.name "Your Name"
-> git config --global user.email "your_email@example.com"
-> ```
->
 > 校验:`git config --global --list`
 
 ## 一、行尾(多人协作冲突的根因,优先级最高)
